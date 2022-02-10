@@ -96,7 +96,7 @@ body
                 letter-spacing: 2px
                 text-align: justify
                 color: #fff
-                font-family: 'Poiret One'
+                font-family: 'Poiret One', sans-serif
 
 .title
     height: 120px
@@ -129,7 +129,7 @@ body
         height: 120px
         width: 360px
         padding: 24px
-        font-family: 'Poiret One'
+        font-family: 'Poiret One', sans-serif
         font-size: 16px
         font-weight: 400
         line-height: 21px
@@ -197,7 +197,7 @@ body
             position: relative
             p
                 margin: 0 40px
-                font-family: 'Poiret One'
+                font-family: 'Poiret One', sans-serif
                 line-height: 40px
                 letter-spacing: 5px
                 text-align: center
@@ -361,12 +361,12 @@ body
         position: relative
         margin: 80px 0
         padding: 30px
-        height: 560px
-        width: 360px
+        height: auto
+        max-width: 360px
         background-color: #120E10
         &_image
             height: 300px
-            width: 300px
+            max-width: 300px
             background-color: #fff
         &_text
             padding: 24px
@@ -375,7 +375,7 @@ body
             height: 150px
             display: flex
             align-items: center
-            font-family: 'Poiret One'
+            font-family: 'Poiret One', sans-serif
             font-size: 16px
             font-weight: 400
             line-height: 21px
@@ -385,7 +385,7 @@ body
         &_author
             margin-top: 10px
             display: block
-            font-family: 'Poiret One'
+            font-family: 'Poiret One', sans-serif
             text-align: right
             font-size: 18px
             font-weight: 700
@@ -468,7 +468,7 @@ body
         &_descr
             margin-top: 20px
             li
-                font-family: 'Poiret One'
+                font-family: 'Poiret One', sans-serif
                 text-align: justify
                 letter-spacing: 4px
                 font-size: 18px
@@ -479,7 +479,7 @@ body
     &_socials
         margin: 0 auto 20px
         display: flex
-        width: 360px
+        max-width: 360px
         height: 50px
         justify-content: space-between
         background: #fff
@@ -602,9 +602,12 @@ body
                 left: 20px
                 top: 80px
             &_block
-                top: 250px
+                top: 275px
                 width: auto
-
+    .title
+        align-items: flex-end
+        p
+            width: 100%
     .gallery
         &_carousel
             &_title
@@ -644,3 +647,29 @@ body
         &_card
             .arrow_left, .arrow_right
                 display: none                     
+
+@media (max-width: 390px)
+    .welcome
+        .about
+            &_block
+                max-width: 270px
+                &_header
+                    font-size: 17px
+    .subtitle
+        p
+            font-size: 20px
+    .gallery
+        &_block
+            &_image
+                width: 100vW
+                height: 133vW
+        &_carousel
+            &_counter
+                p
+                    margin: 0 4px
+            &_photos
+                width: 100vW
+                height: 40vW
+                &_item
+                    width: 30%
+                    height: 100%
