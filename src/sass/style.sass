@@ -1,7 +1,7 @@
 *
     padding: 0
     margin: 0
-    box-size: border-box
+    box-sizing: border-box
     font-family: Roboto
 
 body
@@ -72,6 +72,7 @@ body
             width: 150px
             background-color: #343232
             border-radius: 50%
+            cursor: pointer
         &_block
             padding: 15px
             display: flex
@@ -143,6 +144,8 @@ body
     display: flex
     justify-content: center
     align-items: center
+    &_navs
+        display: none
     &_block
         padding: 40px
         min-height: 100%
@@ -352,6 +355,8 @@ body
     display: flex
     flex-direction: column
     align-items: center
+    &_navs
+        display: none
     &_card
         position: relative
         margin: 80px 0
@@ -586,4 +591,56 @@ body
             padding-bottom: 40px
             background-color: #120E10
                     
-                                
+@media (max-width: 575.5px)   
+    .welcome
+        .about
+            background-color: rgba(15, 24, 24, 0.3)
+            width: 100%
+            left: 0
+            &_image
+                background-color: #fff
+                left: 20px
+                top: 80px
+            &_block
+                top: 250px
+                width: auto
+
+    .gallery
+        &_carousel
+            &_title
+                .arrow_top_left, .arrow_top_right 
+                    display: none
+        &_navs
+            display: flex
+            flex-direction: row
+            justify-content: center
+            margin-bottom: 15px
+        &_nav
+            border-radius: 50%
+            margin-right: 10px
+            width: 15px
+            height: 15px
+            background-color: #a1a1a1
+            &:last-child
+                margin-right: 0 
+            &_active 
+                background-color: #fff    
+    .feedback
+        &_navs
+            display: flex
+            flex-direction: row
+            justify-content: center
+            margin-bottom: 15px
+        &_nav
+            border-radius: 50%
+            margin-right: 10px
+            width: 15px
+            height: 15px
+            background-color: #a1a1a1
+            &:last-child
+                margin-right: 0 
+            &_active 
+                background-color: #fff   
+        &_card
+            .arrow_left, .arrow_right
+                display: none                     
