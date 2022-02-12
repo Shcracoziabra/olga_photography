@@ -24,7 +24,7 @@ body
             justify-content: center
             align-items: center
             background-color: #0F1818
-            width: 100%
+            width: 100vW
             height: 60px
             .menu
                 width: 100%
@@ -81,7 +81,7 @@ body
             position: absolute
             left: 15px
             top: 150px
-            height: 150px
+            min-height: 150px
             max-width: 400px
             &_header
                 font-size: 14px
@@ -365,14 +365,16 @@ body
         max-width: 360px
         background-color: #120E10
         &_image
+            display: block
+            margin: 0 auto
             height: 300px
-            max-width: 300px
+            width: 300px
             background-color: #fff
         &_text
             padding: 24px
             margin-top: 30px
             background: #120E10;
-            height: 150px
+            min-height: 150px
             display: flex
             align-items: center
             font-family: 'Poiret One', sans-serif
@@ -449,10 +451,10 @@ body
 .price
     &_wrapper
         margin-top: 80px
-        height: 350px
+        min-height: 350px
         background-color: #120E10
     &_block
-        width: 300px
+        max-width: 300px
         margin: 0 auto
         margin-top: 40px
         text-align: center
@@ -520,10 +522,19 @@ body
                 &_item
                     width: 90px
                     height: 120px
+    .feedback
+        &_card
+            &_text
+                font-size: 22px
+                line-height: 24px
     .price
         &_block
             &_header
                 font-size: 17px
+            &_descr
+                
+                li
+                    font-size: 22px
 
 @media (max-width: 767.5px)
     .welcome
@@ -594,21 +605,25 @@ body
 @media (max-width: 575.5px)   
     .welcome
         .about
-            background-color: rgba(15, 24, 24, 0.3)
             width: 100%
             left: 0
             &_image
                 background-color: #fff
-                left: 20px
-                top: 80px
+                left: 30px
+                top: 95%
+                transform: translateY(-100%)
+                width: 100px
+                height: 100px
             &_block
-                top: 275px
+                top: 146px
                 width: auto
     .title
         align-items: flex-end
         p
             width: 100%
     .gallery
+        &_block
+            padding: 40px 0
         &_carousel
             &_title
                 .arrow_top_left, .arrow_top_right 
@@ -652,24 +667,35 @@ body
     .welcome
         .about
             &_block
-                max-width: 270px
+                max-width: 100%
                 &_header
-                    font-size: 17px
+                    font-size: 16px
+    .title
+        p
+            font-size: 17px
     .subtitle
         p
-            font-size: 20px
+            font-size: 22px
+            line-height: 24px
     .gallery
         &_block
             &_image
-                width: 100vW
+                width: 100%
                 height: 133vW
         &_carousel
             &_counter
                 p
                     margin: 0 4px
             &_photos
-                width: 100vW
+                width: 100%
                 height: 40vW
                 &_item
                     width: 30%
                     height: 100%
+    .feedback
+        &_card
+            padding: 30px 10px
+            width: 100%
+            &_image
+                width: 100%
+                height: 100vW
